@@ -1,0 +1,26 @@
+{
+  "name": "mean",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "latest",
+    "angular-resource": "latest",
+    "angular-cookies": "latest",
+    "angular-mocks": "latest",
+    "angular-route": "latest",
+    "angular-messages": "latest",
+    "bootstrap": "latest",
+    "angular-bootstrap": "latest",
+    "angular-ui-utils": "latest",
+    "lodash": "latest",
+    "underscore": "1.7.0",
+    "underscore.string": "2.4.0",
+    "angular-filter": "latest",
+    "components-font-awesome": "latest",
+    "angular-md5": "latest",
+    "angular-file-upload": "latest",
+    "angular-slick": "latest",
+    "Bootflat": "latest",
+    "angular-local-storage": "~0.1.5",
+    "angulartics": "~0.17.2"
+  }
+}

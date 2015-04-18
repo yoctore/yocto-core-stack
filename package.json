@@ -1,0 +1,15 @@
+{
+  "name": "yocto-core-stack",
+  "description": "Core data and functionalities of yocto stack",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "express": "~4.9.0",
+    "express-less": "latest",
+    "express-session": "latest",
+    "lodash": "latest",
+    "portscanner": "latest",
+    "yocto-logger" : "git+ssh:://git@lab.yocto.digital:yocto-node-modules/yocto-logger.git"
+  }
+}
