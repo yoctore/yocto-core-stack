@@ -1,0 +1,16 @@
+{
+  "name": "testLodash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testLodash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.7.0",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.0.3"
+  }
+}
