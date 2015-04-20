@@ -32,7 +32,7 @@ router.prototype.check = function(app, route) {
 
    var rules = new Array({ 'property' : 'method', 'required' : true, 'rules' : 'get|post|delete|put'},
                          { 'property' : 'path', 'required' : true },
-                         { 'property' : 'controller', 'required' : true, 'properties' : ['name', 'func']}
+                         { 'property' : 'controller', 'required' : true, 'properties' : ['name', 'endpoint']}
                         );
    /**
     * Checking Property validity
@@ -86,9 +86,9 @@ router.prototype.check = function(app, route) {
                     controllerName = cObj[current];
                   }
 
-                  if (current === 'func') {
+                  if (current === 'endpoint') {
                     if (_.isUndefined(controller) || _.isUndefined(controllerName)) {
-                      logger.warning('Invalid usage for controller config. your properties must be in this order : [name, func]');
+                      logger.warning('Invalid usage for controller config. your properties must be in this order : [name, endpoint]');
                       return false;
                     }
 
@@ -98,7 +98,7 @@ router.prototype.check = function(app, route) {
                     }
                   }
                 }
-              }
+            }
 
               return true;
             });
@@ -115,12 +115,12 @@ router.prototype.check = function(app, route) {
   * @param (Object), route rules
   */
 router.prototype.add = function(app, route) {
-  logger.debug(_.join(' ', 'Adding route [', route.path, '] to a [',  (route.method).toUpperCase(),  '] HTTP method with a callback [',  _.join('.', route.controller.name, route.controller.func), ']'));
+  logger.debug(_.join(' ', 'Adding route [', route.path, '] to a [',  (route.method).toUpperCase(),  '] HTTP method with a callback [',  _.join('.', route.controller.name, route.controller.endpoint), ']'));
 
   var cPath       = path.normalize(_.join('/', constants.CONTROLLERS_DIRECTORY, route.controller.name));
   var controller  = require(cPath);
 
-  app[route.method](route.path, controller[route.controller.func]);
+  app[route.method](route.path, controller[route.controller.endpoint]);
 }
 
 /**
