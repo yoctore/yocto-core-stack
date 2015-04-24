@@ -38,6 +38,7 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ConfController.html">ConfController</a></li>
                                 <li><a href="../classes/Gruntfile.html">Gruntfile</a></li>
                             </ul>
                 
@@ -115,12 +116,13 @@
           */
          jshint : {
              options: {
-                 node:true,
-                 yui:true,
+                 node : true,
+                 yui  : true,
              },
              all : [
                  &#x27;Gruntfile.js&#x27;,
-                 &#x27;index.js&#x27;
+                 &#x27;index.js&#x27;,
+                 &#x27;./Test/testConfig/confController.js&#x27;
                  ]
          },
 
@@ -147,9 +149,9 @@
           *
           * @submodule copy
           */
-         copy: {
-            main: {
-                files: [
+         copy : {
+            main : {
+                files : [
                     // clone documentation/src in documentation/dist
                     { expand    : true,
                       cwd       : &#x27;documentation/src/&#x27;,
@@ -188,7 +190,7 @@
      grunt.loadNpmTasks(&#x27;grunt-contrib-yuidoc&#x27;);
      grunt.loadNpmTasks(&#x27;grunt-contrib-copy&#x27;);
 
-     grunt.registerTask(&#x27;default&#x27;, [ &#x27;jshint&#x27;, &#x27;yuidoc&#x27;, &#x27;copy&#x27;, &#x27;uglify&#x27;]);
+     grunt.registerTask(&#x27;default&#x27;, [&#x27;jshint&#x27;, &#x27;yuidoc&#x27;, &#x27;copy&#x27;, &#x27;uglify&#x27;] );
 
  };
 

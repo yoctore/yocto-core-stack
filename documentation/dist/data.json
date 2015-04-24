@@ -6,6 +6,29 @@
         "url": ""
     },
     "files": {
+        "Test/testConfig/config/all.js": {
+            "name": "Test/testConfig/config/all.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "Test/testConfig/TestConfControler.js": {
+            "name": "Test/testConfig/TestConfControler.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "Test/testConfig/confController.js": {
+            "name": "Test/testConfig/confController.js",
+            "modules": {},
+            "classes": {
+                "ConfController": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "bower_components/angular/angular.js": {
             "name": "bower_components/angular/angular.js",
             "modules": {
@@ -698,12 +721,14 @@
         "ng": {
             "name": "ng",
             "submodules": {},
-            "classes": {},
+            "classes": {
+                "ConfController": 1
+            },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "bower_components/angular/angular.js",
-            "line": 160,
+            "file": "Test/testConfig/confController.js",
+            "line": 50,
             "ngdoc": "module",
             "kind": "function",
             "params": [
@@ -849,7 +874,7 @@
             "module": "Grunt file",
             "namespace": "",
             "file": "Gruntfile.js",
-            "line": 37,
+            "line": 38,
             "description": "Yuidoc permit to generate the yuidoc of the Yocto Stack Generator"
         },
         "copy": {
@@ -862,7 +887,7 @@
             "module": "Grunt file",
             "namespace": "",
             "file": "Gruntfile.js",
-            "line": 55,
+            "line": 56,
             "description": "Copy permit to copy folder"
         },
         "uglify": {
@@ -882,6 +907,22 @@
         }
     },
     "classes": {
+        "ConfController": {
+            "name": "ConfController",
+            "shortname": "ConfController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ng",
+            "file": "Test/testConfig/confController.js",
+            "line": 50,
+            "description": "Yocto config controller. Manage your configuration in correlation with the NODE_ENV variable.\n\n\n\nFor more details on these dependencies read links below :\n- Winston : https://github.com/flatiron/winston\n- LodAsh : https://lodash.com/\n- path : https://nodejs.org/api/path.html",
+            "date": ": 24/04/2015",
+            "author": ": Cédric BALARD <cedric@yocto.re>",
+            "copyright": ": Yocto SAS, All right reserved"
+        },
         "Gruntfile": {
             "name": "Gruntfile",
             "shortname": "Gruntfile",
@@ -902,6 +943,179 @@
         }
     },
     "classitems": [
+        {
+            "file": "Test/testConfig/config/all.js",
+            "line": 1,
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/config/all.js",
+            "line": 5,
+            "description": "Setting up the current general constant",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/config/all.js",
+            "line": 16,
+            "description": "Setting up general constant to use in app",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/config/all.js",
+            "line": 43,
+            "description": "Export the current data into main app module",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/TestConfControler.js",
+            "line": 52,
+            "description": "Display conf just for testing",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 8,
+            "description": "IS the absoluth path of the project",
+            "itemtype": "property",
+            "name": "ROOT_PATH",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 15,
+            "description": "Contains all parameters for system configuration",
+            "itemtype": "property",
+            "name": "allFile",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 22,
+            "description": "Contains all parameters for common application configuration",
+            "itemtype": "property",
+            "name": "commonConfFile",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 29,
+            "description": "Contains all policies for checking new configuration",
+            "itemtype": "property",
+            "name": "policies",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 36,
+            "description": "Object that permit to log information",
+            "itemtype": "property",
+            "name": "logger",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 70,
+            "description": "Create the main object that will contain all configuration",
+            "type": "{Object}",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 77,
+            "description": "Prepocess run process with the configuration file based on \"process.env.NODE_ENV\"",
+            "itemtype": "method",
+            "name": "preProcessConf",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "type of configuration (Eg. 'developpement', 'staging', 'production')",
+                    "type": "String"
+                }
+            ],
+            "throw": "error config file",
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 93,
+            "description": "Check if all new data is good with @function{checkDataIntegrity}\nIf it's okay, we merge the new data into commonFile.js",
+            "metho": "processConf",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "Path of file configuration",
+                    "type": "[String]"
+                }
+            ],
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 122,
+            "description": "Read policies.json and compare all type with the given file",
+            "itemtype": "method",
+            "name": "checkDataIntegrity",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 164,
+            "description": "Check type of 'param' for a given type",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "Desired type",
+                    "type": "String"
+                },
+                {
+                    "name": "param",
+                    "description": "The object to test",
+                    "type": "Object"
+                },
+                {
+                    "name": "paramString",
+                    "description": "Name of the obejc to check",
+                    "type": "Sting"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 201,
+            "description": "Permit to update configuration dynamiclly",
+            "params": [
+                {
+                    "name": "dataToExtend",
+                    "description": "New parameters",
+                    "type": "[type]"
+                }
+            ],
+            "class": "ConfController"
+        },
+        {
+            "file": "Test/testConfig/confController.js",
+            "line": 216,
+            "description": "Export the ConfController",
+            "class": "ConfController"
+        },
         {
             "file": "bower_components/angular/angular.js",
             "line": 1,
@@ -27733,14 +27947,14 @@
         },
         {
             "file": "config/common.js",
-            "line": 17,
+            "line": 16,
             "description": "Setting up general constant to use in app",
             "class": "Gruntfile",
             "module": "ngMock"
         },
         {
             "file": "config/common.js",
-            "line": 44,
+            "line": 43,
             "description": "Export the current data into main app module",
             "class": "Gruntfile",
             "module": "ngMock"
@@ -29109,6 +29323,30 @@
         }
     ],
     "warnings": [
+        {
+            "message": "unknown tag: date",
+            "line": " Test/testConfig/TestConfControler.js:7"
+        },
+        {
+            "message": "unknown tag: copyright",
+            "line": " Test/testConfig/TestConfControler.js:7"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " Test/testConfig/confController.js:50"
+        },
+        {
+            "message": "unknown tag: copyright",
+            "line": " Test/testConfig/confController.js:50"
+        },
+        {
+            "message": "unknown tag: throw",
+            "line": " Test/testConfig/confController.js:77"
+        },
+        {
+            "message": "unknown tag: metho",
+            "line": " Test/testConfig/confController.js:93"
+        },
         {
             "message": "unknown tag: license",
             "line": " bower_components/angular/angular.js:1"
@@ -38175,6 +38413,46 @@
         },
         {
             "message": "Missing item type",
+            "line": " Test/testConfig/config/all.js:1"
+        },
+        {
+            "message": "Missing item type\nSetting up the current general constant",
+            "line": " Test/testConfig/config/all.js:5"
+        },
+        {
+            "message": "Missing item type\nSetting up general constant to use in app",
+            "line": " Test/testConfig/config/all.js:16"
+        },
+        {
+            "message": "Missing item type\nExport the current data into main app module",
+            "line": " Test/testConfig/config/all.js:43"
+        },
+        {
+            "message": "Missing item type\nDisplay conf just for testing",
+            "line": " Test/testConfig/TestConfControler.js:52"
+        },
+        {
+            "message": "Missing item type\nCreate the main object that will contain all configuration",
+            "line": " Test/testConfig/confController.js:70"
+        },
+        {
+            "message": "Missing item type\nCheck if all new data is good with @function{checkDataIntegrity}\nIf it's okay, we merge the new data into commonFile.js",
+            "line": " Test/testConfig/confController.js:93"
+        },
+        {
+            "message": "Missing item type\nCheck type of 'param' for a given type",
+            "line": " Test/testConfig/confController.js:164"
+        },
+        {
+            "message": "Missing item type\nPermit to update configuration dynamiclly",
+            "line": " Test/testConfig/confController.js:201"
+        },
+        {
+            "message": "Missing item type\nExport the ConfController",
+            "line": " Test/testConfig/confController.js:216"
+        },
+        {
+            "message": "Missing item type",
             "line": " bower_components/angular/angular.js:1"
         },
         {
@@ -43923,11 +44201,11 @@
         },
         {
             "message": "Missing item type\nSetting up general constant to use in app",
-            "line": " config/common.js:17"
+            "line": " config/common.js:16"
         },
         {
             "message": "Missing item type\nExport the current data into main app module",
-            "line": " config/common.js:44"
+            "line": " config/common.js:43"
         },
         {
             "message": "Missing item type\nDependencies",

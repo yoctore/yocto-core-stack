@@ -38,6 +38,7 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ConfController.html">ConfController</a></li>
                                 <li><a href="../classes/Gruntfile.html">Gruntfile</a></li>
                             </ul>
                 
@@ -98,12 +99,11 @@ var path = require(&#x27;path&#x27;);
 var gSystem = {
   DEV_MODE              : &#x27;development&#x27;,
   PROD_MODE             : &#x27;production&#x27;,
-  STAG_MODE             : &#x27;staging&#x27;,  
+  STAG_MODE             : &#x27;staging&#x27;,
   SYSTEM_PORT           : process.env.NODE_PORT || 3000,
   ROOT_PATH             : path.normalize(__dirname + &#x27;/../..&#x27;),
-  APP_NAME              : &#x27;bazarmu&#x27;,
-}
- 
+};
+
 /**
  * Setting up general constant to use in app
  */
@@ -114,19 +114,19 @@ var globals = {
   PORT                  : gSystem.SYSTEM_PORT,
   DEV_MODE              : gSystem.DEV_MODE,
   PROD_MODE             : gSystem.PROD_MODE,
-  STAG_MODE             : gSystem.STAG_MODE,  
+  STAG_MODE             : gSystem.STAG_MODE,
   APP_NAME              : gSystem.APP_NAME,
-  
+
   // MVC Directory path
   MODELS_DIRECTORY      : gSystem.ROOT_PATH + &#x27;/app/models&#x27;,
   CONTROLLERS_DIRECTORY : gSystem.ROOT_PATH + &#x27;/app/controllers&#x27;,
   VIEWS_DIRECTORY       : gSystem.ROOT_PATH + &#x27;/app/views&#x27;,
-  
+
   // Public Path
   PUBLIC_DIRECTORY      : gSystem.ROOT_PATH + &#x27;/public&#x27;,
 
   // Assets Path
-  ICONS_DIRECTORY        : gSystem.ROOT_PATH + &#x27;/public/icons&#x27;,  
+  ICONS_DIRECTORY        : gSystem.ROOT_PATH + &#x27;/public/icons&#x27;,
   // Default key for encryption
   ENCRYPT_KEY           : new Buffer(&#x27;6e67ae372ad6d85cfad1abc366823e28&#x27;, &#x27;hex&#x27;)
 };

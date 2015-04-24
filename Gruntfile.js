@@ -25,12 +25,13 @@
           */
          jshint : {
              options: {
-                 node:true,
-                 yui:true,
+                 node : true,
+                 yui  : true,
              },
              all : [
                  'Gruntfile.js',
-                 'index.js'
+                 'index.js',
+                 './Test/testConfig/confController.js'
                  ]
          },
 
@@ -57,9 +58,9 @@
           *
           * @submodule copy
           */
-         copy: {
-            main: {
-                files: [
+         copy : {
+            main : {
+                files : [
                     // clone documentation/src in documentation/dist
                     { expand    : true,
                       cwd       : 'documentation/src/',
@@ -98,6 +99,6 @@
      grunt.loadNpmTasks('grunt-contrib-yuidoc');
      grunt.loadNpmTasks('grunt-contrib-copy');
 
-     grunt.registerTask('default', [ 'jshint', 'yuidoc', 'copy', 'uglify']);
+     grunt.registerTask('default', ['jshint', 'yuidoc', 'copy', 'uglify'] );
 
  };
