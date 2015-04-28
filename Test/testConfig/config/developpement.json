@@ -3,13 +3,13 @@
         "name": "modName"
     },
     "db" : {
-      "name"                  : "bazarmauriceDev",
-      "host"                  : "127.0.0.255",
+      "name"                  : 2,
+      "host"                  : 2,
       "timezone"              : "+06:00",
       "port"                  : "1234"
     },
     "mailer" : {
-      "adminAddress"    : "12"
+      "adminAddress"    : 12
     },
     "logger" : {
     },
@@ -30,7 +30,7 @@
         "subdomains"  : false,
         "http"        : {
           "redirect" : {
-            "port" : 88
+            "port" : "a8"
           }
         }
       }

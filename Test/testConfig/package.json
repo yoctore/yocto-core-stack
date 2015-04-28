@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
+    "joi": "^6.4.1",
     "lodash": "^3.7.0",
-    "winston": "^1.0.0"
+    "yocto-logger":"git+ssh://git@lab.yocto.digital:yocto-node-modules/yocto-logger.git"
   }
 }

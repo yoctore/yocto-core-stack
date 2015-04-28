@@ -28,16 +28,13 @@ var logger  = new (winston.Logger)( {
 });
 
 
-displayConf(confController.confFinal);
+// displayConf(confController.confFinal);
 
 //Mofify parameters with the public method 'extendConf'
-if ( confController.extendConf(   {
-        'db' : {
-            'port'     : "1000",
-            'username' : 'Cédric'
+if ( confController.extendConf( {
+        db : {
         },
-        'mailer' : {
-            'toto' : 1000
+        mailer : {
         }
 
     })) {
@@ -48,17 +45,17 @@ if ( confController.extendConf(   {
         console.log("[-] fail");
     }
 
-
-/**
-* Display conf just for testing
-* @param {[type]} array [description]
-*/
-function displayConf ( array ) {
-    logger.info("|-----------------|");
-    logger.info("|---DisplayConf---|");
-    logger.info("|-----------------|");
-
-    console.log(confController.config);
-
-
-}
+//
+// /**
+// * Display conf just for testing
+// * @param {[type]} array [description]
+// */
+// function displayConf ( array ) {
+//     logger.info("|-----------------|");
+//     logger.info("|---DisplayConf---|");
+//     logger.info("|-----------------|");
+//
+//     console.log(confController.config);
+//
+//
+// }

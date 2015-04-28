@@ -2,60 +2,28 @@
 
 var path     = require('path');
 var _        = require('lodash');
-var winston  = require('winston');
-
+var logger   = require('yocto-logger');
+var Joi      = require('joi');
 
  /**
-   * IS the absoluth path of the project
+   * Is the absoluth path of the project
    *
    * @property ROOT_PATH
+   * @type String
    */
  var ROOT_PATH = path.normalize(__dirname + '/../..');
 
-/**
-  * Contains all parameters for system configuration
-  *
-  * @property allFile
-  */
-var allFile = require(path.join( ROOT_PATH , 'Test/testConfig/config/all.js'));
-
-/**
-  * Contains all parameters for common application configuration
-  *
-  * @property commonConfFile
-  */
-var commonConfFile = require(path.join( ROOT_PATH , 'Test/testConfig/config/common.json'));
-
-/**
-  * Contains all policies for checking new configuration
-  *
-  * @property policies
-  */
-var policies = require(path.join( ROOT_PATH , 'Test/testConfig/config/policies.json'));
-
-/**
-  * Object that permit to log information
-  *
-  * @property logger
-  */
-var logger  = new (winston.Logger)( {
-    transports : [
-        new (winston.transports.Console)( {
-            colorize : true
-        }),
-    ]
-});
 
 
 /**
- * Yocto config controller. Manage your configuration in correlation with the NODE_ENV variable.
- *
- *
+ * Yocto config controller. <br/>
+ * Manage your configuration in correlation with the NODE_ENV variable.
  *
  * For more details on these dependencies read links below :
- * - Winston : https://github.com/flatiron/winston
+ * - yocto-logger : lab.yocto.digital:yocto-node-modules/yocto-logger.git
  * - LodAsh : https://lodash.com/
  * - path : https://nodejs.org/api/path.html
+ * - Joi : https://github.com/hapijs/joi
  *
  *
  * @date : 24/04/2015
@@ -64,13 +32,36 @@ var logger  = new (winston.Logger)( {
  * @class ConfController
  */
 function ConfController() {
-    //Save the context
-    var context = this;
 
     /**
-     * Create the main object that will contain all configuration
+      * Save the context for constructor
+      *
+      * @property context
+      * @type Object
+      */
+     var context = this;
+
+    /**
+      * Contains all parameters for system configuration
+      *
+      * @property allFile
+      * @type Object
+      */
+      this.allFile = require(path.join( ROOT_PATH , 'Test/testConfig/config/all.js'));
+
+
+    /**
+      * Contains all parameters for common application configuration
+      *
+      * @property commonConfFile
+      * @type Object
+      */
+    this.commonConfFile = require(path.join( ROOT_PATH , 'Test/testConfig/config/common.json'));
+
+    /**
+     * Create the main object that will contain all final configuration
      *
-     * @type {Object}
+     * @property {Object} config
      */
     this.config = {};
 
@@ -78,11 +69,11 @@ function ConfController() {
     * Prepocess run process with the configuration file based on "process.env.NODE_ENV"
     *
     * @method preProcessConf
-    * @param {String} mode type of configuration (Eg. 'developpement', 'staging', 'production')
     * @throw error config file
     */
     var preProcessConf = function() {
         try {
+            //Construct path of the configuration file
             var pathConf = path.join( ROOT_PATH , 'Test/testConfig/config', (process.env.NODE_ENV+'.json'));
             processConf(pathConf);
         } catch (e) {
@@ -94,104 +85,93 @@ function ConfController() {
     * Check if all new data is good with @function{checkDataIntegrity}
     * If it's okay, we merge the new data into commonFile.js
     *
-    * @metho processConf
-    * @param {[String]} path Path of file configuration
+    * @method processConf
+    * @param {String} path Path of the Json configuration file
     */
     var processConf = function ( path ) {
         try {
+            //load json file (<environement>.json and all.json)
             var file = require ( path );
 
+            //Check if data is conform
             if ( context.checkDataIntegrity(file) ) {
-                logger.info( '[+] data checking success');
+                logger.info( '[+] data checking success, configuration change');
 
                 //Instanciate the main config
-                context.config = _.merge( commonConfFile, file );
+                context.config = _.merge( this.commonConfFile, file );
 
                 // now importOject all.js and add it into 'config' in the subObject named 'sys'
-                var sys = { 'sys' : allFile };
+                var sys = { 'sys' : this.allFile };
                 _.assign( context.config, sys );
             }
             else  {
-                logger.info( '[-] data checking fail' );
+                logger.info( '[-] data checking fail, configuration don\'t change' );
             }
         } catch (e) {
             throw new Error ( ' ProcessConf() error ' + e );
         }
     };
 
+
     /**
      * Read policies.json and compare all type with the given file
      *
      * @method checkDataIntegrity
-     * @param {[type]} file [description]
+     * @param {Object} dataToExtend JSon file of node environement
+     * @return {Boolean} true if all data as the good type, false otherwise
      */
-    this.checkDataIntegrity = function ( file ) {
-        console.log('-------checkDataIntegrity-------');
-        var listError = [];
+    this.checkDataIntegrity = function ( dataToExtend ) {
 
-        //Read each line in policies.json
-        _.forEach(policies.policies, function (value, key) {
-            var tab     = _.words(key, /[^, , \.]+/g) ;
-            var fileTmp = file;
-
-            //Get the value of the given object (eg. key)
-            _.forEach( tab, function (val) {
-                fileTmp = ( _.at(fileTmp, val ) );
-                fileTmp = _.first(fileTmp);
-            });
-
-            //If is not undefined we check type of the new parameter
-            if (! _.isUndefined(fileTmp) ) {
-                listError.push( checkIfType(value, fileTmp, key ) );
-            }
+        // define all rules for verification
+        var schema = Joi.object().min(1).keys({
+            app : Joi.object().keys({
+                name            : Joi.string(),
+                adminTimeOut    : Joi.number()
+            }),
+            db  : Joi.object().keys({
+                name        : Joi.string(),
+                username    : Joi.string(),
+                host        : Joi.string(),
+                port        : Joi.number()
+            }),
+            mailer : Joi.object().keys({
+                adminAddress    : Joi.string(),
+                host            : Joi.string(),
+                port            : Joi.number()
+            }),
+            express : Joi.object().keys({
+                vhost : Joi.object().keys({
+                    http : Joi.object().keys({
+                        redirect : Joi.object().keys({
+                            port    : Joi.number()
+                        }),
+                    }),
+                    subdomains  : Joi.boolean()
+                }),
+            }),
         });
 
-        //remove all null value
-        listError = _.compact(listError);
+        //run the process of joi validation
+        var result = Joi.validate(dataToExtend, schema, {
+            abortEarly      : false ,
+            allowUnknown    : true
+        });
 
-        if ( _.isEmpty(listError) ) {
-            logger.info( 'all data is correct, we can merge data');
-            return true;
-        }
-        else {
-            logger.error( ' Error : ' + listError.length + ' parameter(s) isn\'t (aren\'t) conform \n' +
-                          _(listError).join('\n')    );
+        //check if have error on validating
+        if ( (! _.isEmpty(result)) && (!_.isEmpty(result.error)) ) {
+            logger.warning(result.error.details.length + ' error found when trying to load the new configuration');
+
+            //Log each error
+            _.forEach(result.error.details, function(val)
+            {
+                logger.warning(  val.message + ' at ' + val.path );
+            });
             return false;
         }
-
-    };
-
-    /**
-     * Check type of 'param' for a given type
-     * @param {String} type        Desired type
-     * @param {Object} param       The object to test
-     * @param {Sting} paramString Name of the obejc to check
-     * @return
-     */
-    var checkIfType =  function( type, param, paramString) {
-        logger.info( 'Analyse type :', type ,', paramString :', paramString,'param : ', param);
-
-        if( type == 'string') {
-            if ( _.isString( param ) ) {
-                return null;
-            }
+        else {
+            logger.info(' no error found when trying to load the new configuration');
+            return true;
         }
-        else if( type == 'boolean' ) {
-            if ( _.isBoolean( param ) ) {
-                return null;
-            }
-        }
-        else if( type == 'number' ) {
-            if ( _.isNumber( param ) ) {
-                return null;
-            }
-            else if ( _.isString( param ) ) {
-                if (! _.isNaN( _.parseInt(param) ) ) {
-                    return null;
-                }
-            }
-        }
-        return paramString + ' : should be a ' + type ;
     };
 
     //Run all the process to create the object
@@ -201,10 +181,11 @@ function ConfController() {
 /**
  * Permit to update configuration dynamiclly
  *
- * @param {[type]} dataToExtend New parameters
+ * @method extendConf
+ * @param {Object} dataToExtend New parameters to modify
+ * @return {Boolean} true if configuration has changed, and false otherwise
  */
 ConfController.prototype.extendConf = function( dataToExtend) {
-
     // Check if all data match with all policies
     if ( this.checkDataIntegrity(dataToExtend) ){
         _.merge( this.config, dataToExtend );
