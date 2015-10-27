@@ -1,0 +1,104 @@
+{
+  "app" : {
+    "name" : "my AP DEV"
+  },
+  "express" : {
+    "jsonp"       : false,
+    "viewEngine" : "jade",
+    "vhost" : {
+      "enable"      : true,
+      "options" : {
+        "url"         : "myhosturl.url",
+        "aliases"     : [ "alias.myhosturl.url" ],      
+        "subdomains"  : true,
+        "http"        : {
+          "redirect" : {
+            "type" : 301,
+            "url"  : "www.myurl.url",
+            "port" : 80
+          }
+        }
+      }
+    },
+    "session" : {
+      "enable" : true,
+      "options" : {
+        "store" : {
+          "instance" : "mongo",
+          "uri" : "mongodb://localhost:27017/test",
+          "type" : "uri"
+        }
+      }
+    }
+  },
+  "db" : {
+    "uri" : "localhost:27051"
+  },
+  "passportjs" : {
+    "facebook" : {
+      "identifier" : "fsddfs",
+      "secret" : "fdsfsdfd",
+      "urls" : {
+        "connect"  : "fsdfds",
+        "callback" : "fsdfds"
+      },
+      "db" : {
+        "method" : "fsdfds"
+      },
+      "fields" : []
+    },
+    "twitter" : {
+      "identifier" : "fsddfs",
+      "secret" : "fdsfsdfd",
+      "urls" : {
+        "connect"  : "fsdfds",
+        "callback" : "fsdfds"
+      },
+      "db" : {
+        "method" : "fsdfds"
+      }
+    },
+    "google" : {
+      "identifier" : "fsddfs",
+      "secret" : "fdsfsdfd",
+      "urls" : {
+        "connect"  : "fsdfds",
+        "callback" : "fsdfds"
+      },
+      "db" : {
+        "method" : "fsdfds"
+      },
+      "scope" : [
+        "fdfsdfdfsdfd"
+      ]
+    },
+    "activeDirectory" : {
+      "urls" : {
+        "connect"  : "fsdfds",
+        "callback" : "fsdfds"
+      },
+      "server" : {
+        "bindDn" : "toto",
+        "bindCredentials" : "dqsds",
+        "url" : "ddqsdqsdsq myurl",
+        "searchBase" : "fsdfdsfds",
+        "searchFilter" : "fsdfdsfds"
+      },
+      "db" : {
+        "method" : "fsdfds"
+      }
+    },
+    "standard" : {
+      "urls" : {
+        "connect"  : "fsdfds",
+        "callback" : "fsdfds"
+      },
+      "db" : {
+        "method" : "fsdfdsfds"
+      }
+    }
+  },
+  "test" : {
+    
+  }
+}

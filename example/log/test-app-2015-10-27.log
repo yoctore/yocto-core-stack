@@ -1,0 +1,20 @@
+[2015/10/27 15:15:20] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:15:44] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:39:20] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:42:56] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:44:00] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:45:06] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:45:32] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:46:19] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:46:20] info     : [ Config.find ] - express config was correcty activated.
+[2015/10/27 15:46:20] info     : [ Config.find ] - render config was correcty activated.
+[2015/10/27 15:46:20] info     : [ Config.find ] - router config was correcty activated.
+[2015/10/27 15:46:37] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:46:38] info     : [ Config.find ] - express config was correcty activated.
+[2015/10/27 15:46:38] info     : [ Config.find ] - render config was correcty activated.
+[2015/10/27 15:46:38] info     : [ Config.find ] - router config was correcty activated.
+[2015/10/27 15:46:57] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-10-27.log
+[2015/10/27 15:46:58] info     : [ Config.find ] - express config was correcty activated.
+[2015/10/27 15:46:58] info     : [ Config.find ] - render config was correcty activated.
+[2015/10/27 15:46:58] info     : [ Config.find ] - router config was correcty activated.
+[2015/10/27 15:46:59] error    : uncaughtException: connect ECONNREFUSED 127.0.0.1:27017 {"date":"Tue Oct 27 2015 15:46:59 GMT+0400 (RET)","process":{"pid":42989,"uid":502,"gid":20,"cwd":"/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack","execPath":"/usr/local/bin/node","version":"v4.2.1","argv":["/usr/local/bin/node","/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example"],"memoryUsage":{"rss":79695872,"heapTotal":61856000,"heapUsed":37164016}},"os":{"loadavg":[3.015625,2.73291015625,2.5458984375],"uptime":971851},"trace":[{"column":11,"file":"util.js","function":"Object.exports._errnoException","line":874,"method":"exports._errnoException","native":false},{"column":20,"file":"util.js","function":"exports._exceptionWithHostPort","line":897,"method":"_exceptionWithHostPort","native":false},{"column":14,"file":"net.js","function":"TCPConnectWrap.afterConnect [as oncomplete]","line":1063,"method":"afterConnect [as oncomplete]","native":false}],"stack":["Error: connect ECONNREFUSED 127.0.0.1:27017","    at Object.exports._errnoException (util.js:874:11)","    at exports._exceptionWithHostPort (util.js:897:20)","    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)"]}

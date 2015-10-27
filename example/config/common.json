@@ -1,0 +1,52 @@
+{
+  "app" : {
+    "name" : "myAppName",
+    "session" : {
+      "timeout" : 30
+    }
+  },
+  "express" : {
+    "json" : {
+    },
+    "urlencoded" : {
+      "extended" : false
+    },
+    "cookieParser" : {
+    },
+    "jsonp"       : true,       
+    "prettyHtml"  : true,
+    "filter"      : {
+      "rules" : "json|text|javascript|css|html",
+      "by"    : "Content-Type",
+      "level" : 9
+    },
+    "viewEngine" : "jade",
+    "session" : {
+      "options" : {
+        "cookie" : {}
+      }
+    },
+    "vhost" : {
+      "enable"      : false,
+      "options" : {
+        "url"         : "myhosturl.url",
+        "aliases"     : [ "alias.myhosturl.url" ],      
+        "subdomains"  : true,
+        "http"        : {
+          "redirect" : {
+            "type" : 301,
+            "url"  : "www.myurl.url",
+            "port" : 80
+          }
+        }
+      }
+    }
+  },
+  "render" : {
+    
+  },
+  "router" : {
+    "routes" : "./example/routes",
+    "controllers" : "./example/ctrl"
+  }
+}

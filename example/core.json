@@ -1,0 +1,19 @@
+{
+  "config" : "./example/config",
+  "env" : {
+    "development" : {
+      "logger" : {
+        "rotate" : {
+          "path" : "./example/log",
+          "name" : "test-app"
+        }
+      }
+    },
+    "staging" : {
+      
+    }, 
+    "production" : {
+      
+    }
+  }
+}
