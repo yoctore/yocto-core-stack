@@ -1,7 +1,7 @@
 {
   "name": "yocto-core-stack",
   "version": "1.0.0",
-  "description": "Core package for yocto stack.",
+  "description": "Core package for Yoctopus tools.",
   "scripts": {},
   "author": {
     "name": "Yocto SAS",

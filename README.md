@@ -4,7 +4,14 @@ This module is a part of yocto node modules for NodeJS.
 
 Please see [our NPM repository](https://www.npmjs.com/~yocto) for complete list of available tools (completed day after day).
 
-This module manage init and start of our node core stack.
+This module manage init / start our node core stack based on :
+
+- [yocto-config](https://www.npmjs.com/package/yocto-config)
+- [yocto-express](https://www.npmjs.com/package/yocto-express)
+- [yocto-render](https://www.npmjs.com/package/yocto-render)
+- [yocto-router](https://www.npmjs.com/package/yocto-router)
+
+This module is core module of our tools : **YoctopusJs**
 
 ## Read this before any usage
 
@@ -77,7 +84,13 @@ core.init().then(function () {
 });
 ```
 
-## Yocto Stack Generator
+## Yocto Stack Generator [ NOT published yet ]
 
-You can also use our yeoman generator to generate app automatically
+You can also use our yeoman generator to generate an app automatically : 
+
+**This install must be run by a sudo user**
+
+```bash
+sudo npm install yoctopus
+```
 
