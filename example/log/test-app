@@ -369,3 +369,50 @@
 [2015/11/04 17:35:04] info     : [ Core.start ] - To Kill your server following these command :
 [2015/11/04 17:35:04] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
 [2015/11/04 17:35:04] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 23:45:05] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 23:45:41] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 23:45:45] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 23:45:45] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 23:45:45] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 23:45:45] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 23:45:45] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 23:45:45] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 23:45:45] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 23:45:45] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 23:45:45] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 23:45:45] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 23:45:45] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 23:45:45] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 23:45:45] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 23:45:45] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 23:45:45] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 23:45:45] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 23:45:45] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 23:45:45] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 23:45:45] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 23:45:45] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 23:45:45] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 23:45:45] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 23:45:45] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 23:45:45] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 23:45:45] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 23:45:45] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 23:45:45] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 23:45:46] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 23:45:46] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 23:45:46] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 23:45:46] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 23:45:46] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 23:45:46] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 23:45:46] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 23:45:46] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 23:45:46] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 23:45:46] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 23:45:46] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 23:45:46] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 23:45:46] info     : [ Core.start ] - On standalone usage : kill your process

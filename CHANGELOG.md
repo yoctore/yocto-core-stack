@@ -1,3 +1,11 @@
+## 1.1.0 (2015-11-04)
+
+- Change bind of this on function
+
+## 1.0.1 <=> 1.0.5 (2015-11-04)
+
+- Maj des packages
+
 ## 1.0.0
 
 - Add jwt token process

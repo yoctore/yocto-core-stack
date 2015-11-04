@@ -113,9 +113,6 @@ Core.prototype.setConfigPath = function (p) {
   // create async process
   var deferred  = Q.defer();
 
-  // save context
-  var context   = this;
-
   // test if path is a valid format ?
   if (_.isString(p) && !_.isEmpty(p)) {
     // is absolute ?
@@ -139,7 +136,7 @@ Core.prototype.setConfigPath = function (p) {
           error        = true;
         } else {
           // all is ok set data
-          if (!context.config.setConfigPath(p)) {
+          if (!this.config.setConfigPath(p)) {
             // set error message
             errorMessage = 'Cannot set config path. config refused value.';
             // set error status
@@ -151,16 +148,16 @@ Core.prototype.setConfigPath = function (p) {
       // has error for promise action ?
       if (error) {
         // log error
-        context.logger.error([ '[ Core.setConfigPath ] -', errorMessage ].join(' '));
+        this.logger.error([ '[ Core.setConfigPath ] -', errorMessage ].join(' '));
         // reject
         deferred.reject(errorMessage);
       } else {
         // simple message
-        context.logger.info('[ Core.setConfigPath ] - Config path was correctly set.');
+        this.logger.info('[ Core.setConfigPath ] - Config path was correctly set.');
         // resolve all is ok
         deferred.resolve();
       }
-    });
+    }.bind(this));
   } else {
     // default message
     var message = 'Invalid config path given. Must be a string and not empty';
@@ -185,30 +182,28 @@ Core.prototype.configure = function () {
                        'Starting middleware configuration.' ].join(' '));
   // create async promise
   var deferred = Q.defer();
-  // save current context
-  var context  = this;
 
   // load config
   this.config.load().then(function (data) {
     // Configure render
-    if (context.render.updateConfig(data.render)) {
+    if (this.render.updateConfig(data.render)) {
       // messsage
-      context.logger.info([ '[ Core.configure - Update render config succced.',
+      this.logger.info([ '[ Core.configure - Update render config succced.',
                             'Add reference on app ]' ].join(' '));
       // add on app
-      if (context.addOnApp('render', context.render)) {
+      if (this.addOnApp('render', this.render) && this.addOnApp('logger', this.logger)) {
         // config load already processed so we dont load data again
-        context.app.configureWithoutLoad(context.config, true).then(function () {
+        this.app.configureWithoutLoad(this.config, true).then(function () {
           // add app on router
-          context.router.useApp(context.app.getApp());
+          this.router.useApp(this.app.getApp());
           // set routes path
-          if (context.router.setRoutes(data.router.routes)) {
+          if (this.router.setRoutes(data.router.routes)) {
             // set controller routes
-            if (context.router.setEndPoint(data.router.controllers)) {
+            if (this.router.setEndPoint(data.router.controllers)) {
               // configure router ?
-              if (context.router.configure()) {
+              if (this.router.configure()) {
                 // change process state
-                context.state = true;
+                this.state = true;
                 // resolve all is ok
                 deferred.resolve();
               } else {
@@ -223,7 +218,7 @@ Core.prototype.configure = function () {
             // reject invalid path
             deferred.reject('Invalid path given for routes.');
           }
-        }).catch(function (error) {
+        }.bind(this)).catch(function (error) {
           // reject with error
           deferred.reject(error);
         });
@@ -236,12 +231,12 @@ Core.prototype.configure = function () {
       deferred.reject('Cannot update render config. Cannot process configure.');
     }
     // configure db ?
-  }).catch(function (error) {
+  }.bind(this)).catch(function (error) {
     // error message
-    context.logger.error('[ Core.configure ] - Cannot load config. check your logs.');
+    this.logger.error('[ Core.configure ] - Cannot load config. check your logs.');
     // reject with error message
     deferred.reject(error);
-  });
+  }.bind(this));
 
   // default promise
   return deferred.promise;
@@ -303,9 +298,6 @@ Core.prototype.start = function () {
     var host = this.app.getApp().get('host');
     var env  = this.app.getApp().get('env');
 
-    // saving context
-    var context = this;
-
     // banner start
     this.logger.banner([ '[ Core.start ] - Starting app :',
                           this.app.getApp().get('app_name') ].join(' '));
@@ -315,27 +307,27 @@ Core.prototype.start = function () {
       // port is not used ?
       if (status === 'closed') {
         // let's go !! listen the current port
-        context.app.getApp().listen(port, function () {
-          context.logger.info([ '[ Core.start ] -', env.toUpperCase(),
+        this.app.getApp().listen(port, function () {
+          this.logger.info([ '[ Core.start ] -', env.toUpperCase(),
                                 'mode is enabled.' ].join(' '));
-          context.logger.info([ '[ Core.start ] - starting app on',
+          this.logger.info([ '[ Core.start ] - starting app on',
                                 [ host, port ].join(':') ].join(' '));
-          context.logger.info('[ Core.start ] - To Kill your server following these command :');
-          context.logger.info('[ Core.start ] - No standalone usage : Press Ctrl-C to terminate');
-          context.logger.info('[ Core.start ] - On standalone usage : kill your process');
+          this.logger.info('[ Core.start ] - To Kill your server following these command :');
+          this.logger.info('[ Core.start ] - No standalone usage : Press Ctrl-C to terminate');
+          this.logger.info('[ Core.start ] - On standalone usage : kill your process');
           // resolve all is ok here
           deferred.resolve();
-        });
+        }.bind(this));
       } else {
         // default message
         message = [ 'Cannot start your app. Port [', port,
                     '] is already in use on [', host, ']' ].join(' ');
         // error
-        context.logger.error([ '[ Core.start ] -', message ].join(' '));
+        this.logger.error([ '[ Core.start ] -', message ].join(' '));
         // reject
         deferred.reject(message);
       }
-    });
+    }.bind((this)));
   } else {
     // app is not ready
     this.logger.error([ '[ Core.start ] - ', message ].join(' '));
