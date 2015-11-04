@@ -1,0 +1,371 @@
+[2015/11/04 16:42:03] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 16:42:12] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 16:42:12] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 16:42:12] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 16:42:12] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 16:42:12] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 16:42:12] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 16:42:12] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 16:42:12] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 16:42:12] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 16:42:12] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 16:42:12] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 16:42:12] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 16:42:12] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/models ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory controllers on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/controllers ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory views on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/views ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useDirectory ] - Cannot add directory test on express app. Directory [ /test ] does not exist
+[2015/11/04 16:42:12] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons/favicon.ico ] failed
+[2015/11/04 16:42:12] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 16:42:12] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 16:42:12] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 16:42:12] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 16:42:13] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 16:42:13] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 16:42:13] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 16:42:13] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 16:42:13] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 16:42:13] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 16:42:13] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 16:42:13] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 16:42:13] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 16:42:13] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ POST ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 16:42:13] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 16:42:13] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 16:42:13] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 16:42:13] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 16:42:13] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 16:42:13] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 16:43:13] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 16:43:18] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 16:43:18] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 16:43:18] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 16:43:18] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 16:43:18] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 16:43:18] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 16:43:18] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 16:43:18] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 16:43:18] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 16:43:18] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 16:43:18] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 16:43:18] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 16:43:18] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/models ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory controllers on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/controllers ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory views on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/views ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useDirectory ] - Cannot add directory test on express app. Directory [ /test ] does not exist
+[2015/11/04 16:43:18] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons/favicon.ico ] failed
+[2015/11/04 16:43:18] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 16:43:18] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 16:43:18] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 16:43:18] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 16:43:18] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 16:43:18] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 16:43:18] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 16:43:18] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 16:43:18] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 16:43:18] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 16:43:18] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 16:43:18] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 16:43:18] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 16:43:18] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 16:43:18] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 16:43:18] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 16:43:18] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 16:43:18] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 16:43:18] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 16:43:18] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 16:43:49] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 16:43:53] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 16:43:53] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 16:43:53] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 16:43:53] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 16:43:53] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 16:43:53] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 16:43:53] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 16:43:53] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 16:43:53] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 16:43:53] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 16:43:53] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 16:43:53] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 16:43:53] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/models ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory controllers on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/controllers ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory views on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/views ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useDirectory ] - Cannot add directory test on express app. Directory [ /test ] does not exist
+[2015/11/04 16:43:53] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/my/path/to/public/icons/favicon.ico ] failed
+[2015/11/04 16:43:53] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 16:43:53] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 16:43:53] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 16:43:53] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 16:43:54] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 16:43:54] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 16:43:54] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 16:43:54] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 16:43:54] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 16:43:54] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 16:43:54] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 16:43:54] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 16:43:54] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 16:43:54] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 16:43:54] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 16:43:54] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 16:43:54] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 16:43:54] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 16:43:54] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 16:43:54] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 16:46:59] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 16:47:05] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 16:47:05] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 16:47:05] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 16:47:05] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 16:47:05] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 16:47:05] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 16:47:05] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 16:47:05] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 16:47:05] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 16:47:05] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 16:47:05] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 16:47:05] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 16:47:05] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 16:47:05] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 16:47:05] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 16:47:05] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 16:47:05] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 16:47:05] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 16:47:05] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 16:47:05] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 16:47:05] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 16:47:05] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 16:47:05] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 16:47:05] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 16:47:05] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 16:47:05] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 16:47:05] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 16:47:05] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 16:47:05] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 16:47:05] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 16:47:05] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 16:47:05] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 16:47:05] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 16:47:05] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 16:47:05] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 16:47:05] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 16:47:05] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 16:47:05] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 16:47:05] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 17:01:09] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 17:01:17] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 17:01:17] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 17:01:17] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 17:01:17] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 17:01:17] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 17:01:17] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 17:01:17] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 17:01:17] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 17:01:17] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 17:01:17] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 17:01:18] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 17:01:18] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 17:01:18] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 17:01:18] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 17:01:18] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 17:01:18] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 17:01:18] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 17:01:18] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 17:01:18] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 17:01:18] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 17:01:18] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 17:01:18] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 17:01:18] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 17:01:18] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 17:01:18] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 17:01:18] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 17:01:18] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 17:01:18] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 17:01:18] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 17:01:18] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 17:01:18] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 17:01:18] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 17:01:18] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 17:01:18] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 17:01:18] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 17:01:18] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 17:01:18] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 17:01:18] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 17:01:18] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 17:03:52] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 17:03:57] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 17:03:57] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 17:03:57] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 17:03:57] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 17:03:58] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 17:03:58] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 17:03:58] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 17:03:58] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 17:03:58] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 17:03:58] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 17:03:58] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 17:03:58] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 17:03:58] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 17:03:58] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 17:03:58] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 17:03:58] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 17:03:58] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 17:03:58] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 17:03:58] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 17:03:58] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 17:03:58] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 17:03:58] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 17:03:58] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 17:03:58] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 17:03:58] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 17:03:58] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 17:03:58] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 17:03:58] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 17:03:58] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 17:03:58] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 17:03:58] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 17:03:58] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 17:03:58] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 17:03:58] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 17:03:58] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 17:03:58] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 17:03:58] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 17:03:58] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 17:03:58] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 17:05:09] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 17:05:15] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 17:05:15] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 17:05:15] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 17:05:15] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 17:05:16] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 17:05:16] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 17:05:16] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 17:05:16] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 17:05:16] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 17:05:16] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 17:05:16] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 17:05:16] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 17:05:16] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 17:05:16] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 17:05:16] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 17:05:16] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 17:05:16] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 17:05:16] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 17:05:16] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 17:05:16] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 17:05:16] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 17:05:16] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 17:05:16] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 17:05:16] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 17:05:16] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 17:05:16] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 17:05:16] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 17:05:16] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 17:05:16] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 17:05:16] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 17:05:16] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 17:05:16] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 17:05:16] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 17:05:16] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 17:05:16] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 17:05:16] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 17:05:16] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 17:05:16] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 17:05:16] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/11/04 17:35:00] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-04.log
+[2015/11/04 17:35:03] info     : [ Config.find ] - express config was correcty activated.
+[2015/11/04 17:35:03] info     : [ Config.find ] - render config was correcty activated.
+[2015/11/04 17:35:03] info     : [ Config.find ] - router config was correcty activated.
+[2015/11/04 17:35:03] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/11/04 17:35:03] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/11/04 17:35:03] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/11/04 17:35:03] info     : [ Express.processBase ] - Setting port to [ 3000 ]
+[2015/11/04 17:35:03] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/11/04 17:35:03] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/11/04 17:35:03] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/11/04 17:35:03] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/11/04 17:35:03] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/11/04 17:35:03] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/11/04 17:35:03] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/11/04 17:35:03] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/11/04 17:35:03] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/11/04 17:35:03] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/11/04 17:35:03] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/11/04 17:35:03] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/11/04 17:35:03] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/11/04 17:35:03] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/11/04 17:35:03] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/11/04 17:35:03] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/11/04 17:35:04] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/11/04 17:35:04] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/11/04 17:35:04] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ CSRF ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/11/04 17:35:04] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/11/04 17:35:04] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/11/04 17:35:04] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/11/04 17:35:04] info     : [ Express.configure ] - Express is ready to use ....
+[2015/11/04 17:35:04] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/11/04 17:35:04] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/11/04 17:35:04] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/11/04 17:35:04] info     : [ Router.configure ] - 1 route was added on current app
+[2015/11/04 17:35:04] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/11/04 17:35:04] info     : [ Core.start ] - starting app on 127.0.0.1:3000
+[2015/11/04 17:35:04] info     : [ Core.start ] - To Kill your server following these command :
+[2015/11/04 17:35:04] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/11/04 17:35:04] info     : [ Core.start ] - On standalone usage : kill your process

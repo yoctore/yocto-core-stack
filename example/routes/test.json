@@ -8,7 +8,7 @@
     }
   },
   {
-    "method"  : "post",
+    "method"  : "get",
     "path"    : "/ad/toto",
     "controller" : {
       "name"  : "ad",
