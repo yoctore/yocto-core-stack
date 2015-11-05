@@ -1,3 +1,7 @@
+## 1.1.2 (2015-11-05)
+
+- add config on app to retreive on route if needed
+
 ## 1.1.0 (2015-11-04)
 
 - Change bind of this on function

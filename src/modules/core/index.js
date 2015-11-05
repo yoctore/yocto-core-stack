@@ -191,7 +191,9 @@ Core.prototype.configure = function () {
       this.logger.info([ '[ Core.configure - Update render config succced.',
                             'Add reference on app ]' ].join(' '));
       // add on app
-      if (this.addOnApp('render', this.render) && this.addOnApp('logger', this.logger)) {
+      if (this.addOnApp('render', this.render) &&
+          this.addOnApp('logger', this.logger) &&
+          this.addOnApp('config', this.config)) {
         // config load already processed so we dont load data again
         this.app.configureWithoutLoad(this.config, true).then(function () {
           // add app on router
