@@ -417,3 +417,7 @@
 [2015/11/04 23:45:46] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
 [2015/11/04 23:45:46] info     : [ Core.start ] - On standalone usage : kill your process
 [2015/11/05 17:37:26] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-05.log
+[2015/11/06 19:10:37] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-06.log
+[2015/11/06 19:16:52] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-06.log
+[2015/11/06 19:17:21] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-06.log
+[2015/11/06 19:27:30] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-11-06.log
