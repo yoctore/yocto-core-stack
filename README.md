@@ -84,13 +84,11 @@ core.init().then(function () {
 });
 ```
 
-## Yocto Stack Generator [ NOT published yet ]
+## Yocto Stack Generator
 
-You can also use our yeoman generator to generate an app automatically : 
+You can also use our yeoman generator to generate an app automatically.
 
-**This install must be run by a sudo user**
+For this see [yoctopus-generator](https://www.npmjs.com/package/generator-yoctopus) FAQ 
 
-```bash
-sudo npm install yoctopus
-```
+
 

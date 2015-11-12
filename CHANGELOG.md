@@ -1,3 +1,7 @@
+## -> 1.1.6 (2015-11-12)
+
+- Update iternal package
+
 ## 1.1.2 (2015-11-05)
 
 - add config on app to retreive on route if needed
