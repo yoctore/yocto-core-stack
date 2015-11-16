@@ -16,7 +16,8 @@ core.init().then(function () {
   /********************************************
    *              YOUR CODE HERE              *
    *******************************************/
-console.log('al');
+   logger.banner('ICI DANS LE CODE INIT');
+   console.log(core.getConfig());
   }).catch(function (error) {
     // default error use core logger
     core.logger.error([ '[ CoreWrapper.start ] -', error ].join(' '));

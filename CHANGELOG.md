@@ -1,3 +1,8 @@
+## 1.1.7 - 1.1.8 (2015-11-16)
+
+- Add resolve event when all is ok
+- Add an utility method `getConfig` from `core` process to retrieve config for external usage
+
 ## -> 1.1.6 (2015-11-12)
 
 - Update iternal package

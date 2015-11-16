@@ -171,6 +171,8 @@ CoreWrapper.prototype.start = function () {
           context.core.configure().then(function () {
             // start the app
             context.core.start().then(function () {
+              // send success state to catch event.
+              deferred.resolve();
               // nothing for the moment
             }).catch(function (error) {
               // error message
@@ -211,6 +213,18 @@ CoreWrapper.prototype.start = function () {
 
   // default statement
   return deferred.promise;
+};
+
+/**
+ * Retreive configuration for current app for external usage
+ *
+ * @return {Object} default config object
+ */
+CoreWrapper.prototype.getConfig = function () {
+  // normalize config
+  var c = this.core.config;
+  // default statement
+  return c.config || {};
 };
 
 // Default export
