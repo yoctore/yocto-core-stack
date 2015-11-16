@@ -1,3 +1,7 @@
+## 1.2.0 (2015-11-16)
+
+- Add a new method to add external middleware on app via `useOnApp(middleware)`
+
 ## 1.1.7 - 1.1.8 (2015-11-16)
 
 - Add resolve event when all is ok

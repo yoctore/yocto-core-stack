@@ -84,6 +84,17 @@ core.init().then(function () {
 });
 ```
 
+## How to add external middleware on current app
+
+It's simple juste use an utility method for that : 
+
+```javascript
+// your middleware
+var YOUR_MIDDLEWARE = function(){} ...
+// add it
+core.useOnApp(YOUR_MIDDLEWARE);
+```
+
 ## Yocto Stack Generator
 
 You can also use our yeoman generator to generate an app automatically.

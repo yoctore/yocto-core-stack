@@ -282,6 +282,24 @@ Core.prototype.addOnApp = function (name, value) {
 };
 
 /**
+ * Default function to add an external middleware on app
+ *
+ * @param {Function} middleware default middleware to use on app
+ * @return {Boolean} return true if all is ok falser otherwise
+ */
+Core.prototype.useOnApp = function (middleware) {
+  // is a function ? and app is ready ?
+  if (this.isReady() && _.isFunction(middleware)) {
+    // add middleware on current app
+    this.app.getApp().use(middleware);
+    // valid statement
+    return true;
+  }
+  // default statement
+  return false;
+};
+
+/**
  * Start the main process of your own server
  *
  * @return {Object} default promise to catch
