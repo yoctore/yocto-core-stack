@@ -1,3 +1,7 @@
+## 1.2.1 & 1.2.2 (2015-11-18)
+
+- Update dependencies package
+
 ## 1.2.0 (2015-11-16)
 
 - Add a new method to add external middleware on app via `useOnApp(middleware)`
