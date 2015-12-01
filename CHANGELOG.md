@@ -1,3 +1,7 @@
+## 1.2.3 & 1.2.4 (2015-12-01)
+
+- Update dependencies
+
 ## 1.2.1 & 1.2.2 (2015-11-18)
 
 - Update dependencies package
