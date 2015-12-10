@@ -1,4 +1,8 @@
-## 1.2.3 & 1.2.4 & 1.2.5 & 1.2.6 (2015-12-01)
+## 1.3.0
+
+- Add https support via yocto-express
+
+## 1.2.3 <-> 1.2.9 (2015-12-01)
 
 - Update dependencies
 
