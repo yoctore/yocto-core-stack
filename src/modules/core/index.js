@@ -266,9 +266,12 @@ Core.prototype.addOnApp = function (name, value) {
   if (_.isString(name) && !_.isEmpty(name) && !_.isUndefined(value) && !_.isNull(value)) {
     // add element on app instance
     this.app.getApp().set(name, value);
+
     // a debug message
     this.logger.debug([ '[ Core.addOnApp ] - Add property', name,
-                       'with value :', utils.obj.inspect(value) ].join(' '));
+                       'with value :', utils.obj.inspect(_.omit(value, [
+                       'logger', 'schema', 'schemaList' ]))
+                      ].join(' '));
     // valid statement
     return true;
   }

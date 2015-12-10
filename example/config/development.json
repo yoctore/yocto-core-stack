@@ -1,4 +1,12 @@
 {
+  "protocol" : {
+    "type" : "https",
+    "port" : 8000,
+    "certificate" : {
+      "cert" : "./example/certificate/server.crt",
+      "key" : "./example/certificate/server.key"
+    }
+  },
   "app" : {
     "name" : "my AP DEV"
   },

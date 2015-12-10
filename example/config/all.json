@@ -1,6 +1,5 @@
 {
   "env" : "development",
-  "port" : 3000,
   "directory" : [
     { "models"      : "example/models" },
     { "controllers" : "example/ctrl" },    
