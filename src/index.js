@@ -65,7 +65,7 @@ function CoreWrapper () {
    * @type {String}
    * @default {String}
    */
-  this.env        = process.NODE_ENV || 'development';
+  this.env        = process.env.NODE_ENV || 'development';
 }
 
 /**

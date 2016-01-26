@@ -739,3 +739,50 @@
 [2015/12/10 19:18:40] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
 [2015/12/10 19:18:40] info     : [ Core.start ] - On standalone usage : kill your process
 [2015/12/10 19:18:40] error    : uncaughtException: connect ECONNREFUSED 127.0.0.1:27017 {"date":"Thu Dec 10 2015 19:18:40 GMT+0400 (RET)","process":{"pid":10150,"uid":502,"gid":20,"cwd":"/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack","execPath":"/usr/local/bin/node","version":"v4.2.1","argv":["/usr/local/bin/node","/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example"],"memoryUsage":{"rss":83877888,"heapTotal":61856000,"heapUsed":39052784}},"os":{"loadavg":[1.52490234375,1.2939453125,1.25146484375],"uptime":97543},"trace":[{"column":11,"file":"util.js","function":"Object.exports._errnoException","line":874,"method":"exports._errnoException","native":false},{"column":20,"file":"util.js","function":"exports._exceptionWithHostPort","line":897,"method":"_exceptionWithHostPort","native":false},{"column":14,"file":"net.js","function":"TCPConnectWrap.afterConnect [as oncomplete]","line":1063,"method":"afterConnect [as oncomplete]","native":false}],"stack":["Error: connect ECONNREFUSED 127.0.0.1:27017","    at Object.exports._errnoException (util.js:874:11)","    at exports._exceptionWithHostPort (util.js:897:20)","    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)"]}
+[2015/12/10 20:43:12] info     : [ Logger.addDailyRotateTransport ] - Success ! Datas are logged in /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/log/test-app-2015-12-10.log
+[2015/12/10 20:43:18] info     : [ Config.find ] - express config was correcty activated.
+[2015/12/10 20:43:18] info     : [ Config.find ] - render config was correcty activated.
+[2015/12/10 20:43:18] info     : [ Config.find ] - router config was correcty activated.
+[2015/12/10 20:43:18] info     : [ Core.setConfigPath ] - Config path was correctly set.
+[2015/12/10 20:43:18] info     : [ Config.load ] - Success - Config file was changed with files based on : /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/config
+[2015/12/10 20:43:18] info     : [ Core.configure - Update render config succced. Add reference on app ]
+[2015/12/10 20:43:19] info     : [ Express.processBase ] - Setting app name to [ my-ap-dev ]
+[2015/12/10 20:43:19] info     : [ Express.processBase ] - Setting env to [ development ]
+[2015/12/10 20:43:19] info     : [ Express.processBase ] - Setting host to [ 127.0.0.1 ]
+[2015/12/10 20:43:19] info     : [ Express.processBase ] - Setting protocol to [ https ]
+[2015/12/10 20:43:19] info     : [ Express.processBase ] - Setting port to [ 8000 ]
+[2015/12/10 20:43:19] info     : [ Express.enableStackError ] - Enabling showStackError
+[2015/12/10 20:43:19] info     : [ Express.processPrettyHTML] - Enabling pretty HTML
+[2015/12/10 20:43:19] info     : [ Express.processViewEngine ] - Setting view engine to [ jade ]
+[2015/12/10 20:43:19] warning  : [ Express.useDirectory ] - Cannot add directory models on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/models ] does not exist
+[2015/12/10 20:43:19] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl on express app
+[2015/12/10 20:43:19] info     : [ Express.useDirectory ] - Adding directory /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/views on express app
+[2015/12/10 20:43:19] warning  : [ Express.useDirectory ] - Cannot add directory public on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public ] does not exist
+[2015/12/10 20:43:19] warning  : [ Express.useDirectory ] - Cannot add directory icons on express app. Directory [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons ] does not exist
+[2015/12/10 20:43:19] warning  : [ Express.useFavicon ] - Favicon doesn't exist. Checking path [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/public/icons/favicon.ico ] failed
+[2015/12/10 20:43:19] info     : [ Express.processCompression ] - Setting up compression rules with filter [ json|text|javascript|css|html ] for [ Content-Type ] at level [ 9 ]
+[2015/12/10 20:43:19] warning  : [ Express.processJsonCallack ] - Disable JSONP for express
+[2015/12/10 20:43:19] info     : [ Express.processCookieParser ] - Enable cookieParser
+[2015/12/10 20:43:19] info     : [ Express.configure.processBodyParser ] - Setting up [ json ] parser
+[2015/12/10 20:43:19] info     : [ Express.configure.processBodyParser ] - Setting up [ urlencoded ] parser
+[2015/12/10 20:43:19] info     : [ Express.processMethodOverride ] - Setting up methodOverride to use [ _method ] header rules
+[2015/12/10 20:43:19] info     : [ Express.processSession ] - Setting up expression session middleware support for current express app
+[2015/12/10 20:43:19] info     : [ Express.processSecurity ] - Setting up [ CSP ] rules for current express app
+[2015/12/10 20:43:19] info     : [ Express.processSecurity ] - Setting up [ XFRAME ] rules for current express app
+[2015/12/10 20:43:19] info     : [ Express.processSecurity ] - Setting up [ P3P ] rules for current express app
+[2015/12/10 20:43:19] info     : [ Express.processSecurity ] - Setting up [ HSTS ] rules for current express app
+[2015/12/10 20:43:19] info     : [ Express.processSecurity ] - Setting up [ XSSPROTECTION ] rules for current express app
+[2015/12/10 20:43:19] info     : [ Express.processCors ] - Nothing to process. CORS is disabled.
+[2015/12/10 20:43:19] info     : [ Express.processPrerender ] - nothing to process prerender is disabled.
+[2015/12/10 20:43:20] info     : [ Express.processJwt ] - Nothing to process. jwt is disabled.
+[2015/12/10 20:43:20] info     : [ Express.configure ] - Express is ready to use ....
+[2015/12/10 20:43:20] info     : [ Router.configure ] - Retreiving routes for [ /test.json ]
+[2015/12/10 20:43:20] warning  : [ Router.configure ] - Cannot find Function [ fnB ] for controller [ ad ] on [ /Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example/ctrl/ad.js ]. Operation Aborted
+[2015/12/10 20:43:20] info     : [ Router.configure ] - Adding route [ /ad/toto ] on a [ GET ] HTTP Request with a callback on [ ad.fnA ]
+[2015/12/10 20:43:20] info     : [ Router.addRoute ] - 1 route was added on current app
+[2015/12/10 20:43:20] info     : [ Core.start ] - DEVELOPMENT mode is enabled.
+[2015/12/10 20:43:20] info     : [ Core.start ] - starting app on 127.0.0.1:8000
+[2015/12/10 20:43:20] info     : [ Core.start ] - To Kill your server following these command :
+[2015/12/10 20:43:20] info     : [ Core.start ] - No standalone usage : Press Ctrl-C to terminate
+[2015/12/10 20:43:20] info     : [ Core.start ] - On standalone usage : kill your process
+[2015/12/10 20:43:20] error    : uncaughtException: connect ECONNREFUSED 127.0.0.1:27017 {"date":"Thu Dec 10 2015 20:43:20 GMT+0400 (RET)","process":{"pid":10803,"uid":502,"gid":20,"cwd":"/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack","execPath":"/usr/local/bin/node","version":"v4.2.1","argv":["/usr/local/bin/node","/Users/yocto/Documents/Yocto/projets/yocto-node-modules/yocto-core-stack/example"],"memoryUsage":{"rss":83390464,"heapTotal":61856000,"heapUsed":38327192}},"os":{"loadavg":[1.56787109375,1.453125,1.478515625],"uptime":102623},"trace":[{"column":11,"file":"util.js","function":"Object.exports._errnoException","line":874,"method":"exports._errnoException","native":false},{"column":20,"file":"util.js","function":"exports._exceptionWithHostPort","line":897,"method":"_exceptionWithHostPort","native":false},{"column":14,"file":"net.js","function":"TCPConnectWrap.afterConnect [as oncomplete]","line":1063,"method":"afterConnect [as oncomplete]","native":false}],"stack":["Error: connect ECONNREFUSED 127.0.0.1:27017","    at Object.exports._errnoException (util.js:874:11)","    at exports._exceptionWithHostPort (util.js:897:20)","    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)"]}

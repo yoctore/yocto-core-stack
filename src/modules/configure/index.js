@@ -61,6 +61,7 @@ Configure.prototype.init = function (value) {
   if (_.isNull(validate.error)) {
     // saved rules
     this.rules = validate.value;
+
     // resolve with current object
     deferred.resolve(validate.value);
   } else {

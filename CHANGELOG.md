@@ -1,3 +1,7 @@
+## 1.3.1 - (2016-26-01)
+
+- Fix a bug with process.env usage
+
 ## 1.3.0
 
 - Add https support via yocto-express
