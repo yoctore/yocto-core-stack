@@ -1,4 +1,10 @@
+[![NPM](https://nodei.co/npm/yocto-core-stack.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/yocto-core-stack/)
+
 ![alt text](https://david-dm.org/yoctore/yocto-core-stack.svg "Dependencies Status")
+[![Code Climate](https://codeclimate.com/github/yoctore/yocto-core-stack/badges/gpa.svg)](https://codeclimate.com/github/yoctore/yocto-core-stack)
+[![Test Coverage](https://codeclimate.com/github/yoctore/yocto-core-stack/badges/coverage.svg)](https://codeclimate.com/github/yoctore/yocto-core-stack/coverage)
+[![Issue Count](https://codeclimate.com/github/yoctore/yocto-core-stack/badges/issue_count.svg)](https://codeclimate.com/github/yoctore/yocto-core-stack)
+[![Build Status](https://travis-ci.org/yoctore/yocto-core-stack.svg?branch=master)](https://travis-ci.org/yoctore/yocto-core-stack)
 
 ## Overview
 
@@ -63,7 +69,7 @@ This file must have this structure :
 And start your app like example below : 
 
 ```javascript
-var logger    = require('yocto-logger');
+var logger    = require('yocto-core-stack');
 var core      = require('yocto-core-stack');
 
 // set debug to true if needed
