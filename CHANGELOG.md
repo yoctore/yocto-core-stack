@@ -1,3 +1,7 @@
+## 1.3.5 - (2016-26-01)
+
+- Bug fix : port scanner check now to localhost (127.0.0.1)
+
 ## 1.3.1 - (2016-26-01)
 
 - Fix a bug with process.env usage

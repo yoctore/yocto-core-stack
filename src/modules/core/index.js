@@ -324,9 +324,8 @@ Core.prototype.start = function () {
     // banner start
     this.logger.banner([ '[ Core.start ] - Starting app :',
                           this.app.getApp().get('app_name') ].join(' '));
-
-    // checking port
-    portScanner.checkPortStatus(port, host, function (error, status) {
+    // checking port on localhost
+    portScanner.checkPortStatus(port, '127.0.0.1', function (error, status) {
       // port is not used ?
       if (status === 'closed') {
         // let's go !! listen the current port
@@ -334,7 +333,7 @@ Core.prototype.start = function () {
           this.logger.info([ '[ Core.start ] -', env.toUpperCase(),
                                 'mode is enabled.' ].join(' '));
           this.logger.info([ '[ Core.start ] - starting app on',
-                                [ host, port ].join(':') ].join(' '));
+                                [ '127.0.0.1', port ].join(':') ].join(' '));
           this.logger.info('[ Core.start ] - To Kill your server following these command :');
           this.logger.info('[ Core.start ] - No standalone usage : Press Ctrl-C to terminate');
           this.logger.info('[ Core.start ] - On standalone usage : kill your process');
