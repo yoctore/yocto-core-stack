@@ -9,15 +9,15 @@ core.debug = true;
 
 // Init your app first
 core.init().then(function () {
-  console.log('ala');
+  //console.log('ala');
   // Init succeed start your app
   core.start().then(function () {
 
   /********************************************
    *              YOUR CODE HERE              *
    *******************************************/
-   logger.banner('ICI DANS LE CODE INIT');
-   console.log(core.getConfig());
+   //logger.banner('ICI DANS LE CODE INIT');
+   //console.log(core.getConfig());
   }).catch(function (error) {
     // default error use core logger
     core.logger.error([ '[ CoreWrapper.start ] -', error ].join(' '));

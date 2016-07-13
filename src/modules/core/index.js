@@ -303,6 +303,16 @@ Core.prototype.useOnApp = function (middleware) {
 };
 
 /**
+ * Utility method to check if is a multiple instance app
+ *
+ * @return {Boolean} true if is a multiple instance false otherwise
+ */
+Core.prototype.isMultipleInstances = function () {
+  // default statement
+  return _.has(process.env, 'instances') && _.has(process.env, 'NODE_APP_INSTANCE');
+};
+
+/**
  * Start the main process of your own server
  *
  * @return {Object} default promise to catch
@@ -327,9 +337,26 @@ Core.prototype.start = function () {
 
     // checking port
     portScanner.checkPortStatus(port, host, function (error, status) {
-      // port is not used ?
-      if (status === 'closed') {
-        // let's go !! listen the current port
+      // is not multiple instance and status is closed ?
+      if (!this.isMultipleInstances() && status !== 'closed') {
+        // default message
+        message = [ 'Cannot start your app. Port [', port,
+                    '] is already in use on [', host, ']' ].join(' ');
+        // error
+        this.logger.error([ '[ Core.start ] -', message ].join(' '));
+        // reject
+        deferred.reject(message);
+      } else {
+        // is multiple instance ?
+        if (this.isMultipleInstances()) {
+          // log multiple instance
+          this.logger.info([ '[ Core.start ] - Application [',
+            this.app.getApp().get('app_name'), '] start on cluster mode with [',
+            process.env.instances || 0, '] instances. Current instance is [',
+            process.env.NODE_APP_INSTANCE || 0, ']' ].join(' '));
+        }
+
+        // normal process
         this.app.getApp().listen(port, function () {
           this.logger.info([ '[ Core.start ] -', env.toUpperCase(),
                                 'mode is enabled.' ].join(' '));
@@ -341,14 +368,6 @@ Core.prototype.start = function () {
           // resolve all is ok here
           deferred.resolve();
         }.bind(this));
-      } else {
-        // default message
-        message = [ 'Cannot start your app. Port [', port,
-                    '] is already in use on [', host, ']' ].join(' ');
-        // error
-        this.logger.error([ '[ Core.start ] -', message ].join(' '));
-        // reject
-        deferred.reject(message);
       }
     }.bind((this)));
   } else {
