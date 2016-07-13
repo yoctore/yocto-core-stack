@@ -1,3 +1,7 @@
+## 1.3.6 - (2016-13-07)
+
+Change port scanner rules to work with cluster mode
+
 ## 1.3.5 - (2016-26-01)
 
 - Bug fix : port scanner check now to localhost (127.0.0.1)
