@@ -1,3 +1,8 @@
+## 2.0.0 - (2016-07-26)
+- Improvement :
+  - Migrate lodash -> 4.14.0
+  - Update package.json
+
 ## 1.3.6 - (2016-13-07)
 
 Change port scanner rules to work with cluster mode
