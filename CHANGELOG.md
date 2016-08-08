@@ -1,6 +1,10 @@
+## 1.3.7 - (2016-08-08)
+
+- Change version of yocto-config & yocto-express
+
 ## 1.3.6 - (2016-13-07)
 
-Change port scanner rules to work with cluster mode
+- Change port scanner rules to work with cluster mode
 
 ## 1.3.5 - (2016-26-01)
 
