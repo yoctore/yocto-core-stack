@@ -1,11 +1,16 @@
+## 2.0.1 - (2016-08-08)
+
+- Change version of yocto-config & yocto-express
+
 ## 2.0.0 - (2016-07-26)
+
 - Improvement :
   - Migrate lodash -> 4.14.0
   - Update package.json
 
 ## 1.3.6 - (2016-13-07)
 
-Change port scanner rules to work with cluster mode
+- Change port scanner rules to work with cluster mode
 
 ## 1.3.5 - (2016-26-01)
 
