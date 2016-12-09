@@ -1,6 +1,6 @@
 {
   "protocol" : {
-    "type" : "https",
+    "type" : "http",
     "port" : 8000,
     "certificate" : {
       "cert" : "./example/certificate/server.crt",
@@ -106,7 +106,8 @@
       }
     }
   },
-  "test" : {
-    
+  "cors" : true,
+  "corsCfg" : {
+    "origin" : [ "http://preprod-assets.jumbo-score.com" ]
   }
 }

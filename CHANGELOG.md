@@ -1,3 +1,8 @@
+## 2.1.0 - (2016-12-09)
+
+- Major update in package
+- Remove non needed jade package
+
 ## 2.0.1 - (2016-08-08)
 
 - Change version of yocto-config & yocto-express
