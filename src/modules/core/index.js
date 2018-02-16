@@ -13,32 +13,33 @@ var joi         = require('joi');
  * Default core stack process
  *
  * @class Core
+ * @param {Object} logger logger instance
  */
 function Core (logger) {
   /**
    * Default logger instance
    */
-  this.logger   = logger;
+  this.logger = logger;
 
   /**
    * Default config object
    */
-  this.config   = require('yocto-config')(this.logger);
+  this.config = require('yocto-config')(this.logger);
 
   /**
    * Default render object
    */
-  this.render   = require('yocto-render')(this.logger);
+  this.render = require('yocto-render')(this.logger);
 
   /**
    * Default router object
    */
-  this.router   = require('yocto-router')(this.logger);
+  this.router = require('yocto-router')(this.logger);
 
   /**
    * Current express app
    */
-  this.app      = require('yocto-express')(this.config, this.logger);
+  this.app = require('yocto-express')(this.config, this.logger);
 
   /**
    * Default enable module to use for core stack
@@ -51,7 +52,7 @@ function Core (logger) {
   /**
    * Default for ready check
    */
-  this.state         = false;
+  this.state = false;
 }
 
 /**
@@ -61,113 +62,126 @@ function Core (logger) {
  * @return {Object} default promise to catch
  */
 Core.prototype.initialize = function (items) {
-  // banner message
+  // Banner message
   this.logger.banner('[ Core.initialize ] - Initializing Core Stack > Enable module validators.');
 
-  // create async process
+  // Create async process
   var deferred  = Q.defer();
-  // validation schema
+
+  // Validation schema
   var schema    = joi.array().required().min(1).items(joi.string().required().empty());
 
-  // normalize array if is undefined
+  // Normalize array if is undefined
   items = items || [];
-  // add default item
+
+  // Add default item
   items.push(this.wantedModules);
-  // keep array to one level deep
+
+  // Keep array to one level deep
   items = _.flatten(items);
-  // validate
+
+  // Validate
   var validate  = joi.validate(items, schema);
 
-  // is valid ?
+  // Is valid ?
   if (_.isNull(validate.error)) {
-    // enable validators
+    // Enable validators
     if (this.config.autoEnableValidators(validate.value)) {
-      // save value for configure action
+      // Save value for configure action
       this.wantedModules = validate.value;
-      // resolve all is ok
+
+      // Resolve all is ok
       deferred.resolve(validate.value);
     } else {
-      // reject cannot enable validators
+      // Reject cannot enable validators
       deferred.reject('Cannot enable validators on config package.');
     }
   } else {
-    // reject cannot enable validators
+    // Reject cannot enable validators
     deferred.reject([ 'Cannot enable validators. Errors occured during schema validation :',
-                      validate.error
-                    ].join(' '));
+      validate.error
+    ].join(' '));
   }
 
-  // default statement
+  // Default statement
   return deferred.promise;
 };
 
 /**
- * set config path to use for config load
+ * Set config path to use for config load
  *
  * @param {String} p path of file
  * @return {Object} default promise to catch
  */
 Core.prototype.setConfigPath = function (p) {
-  // banner message
+  // Banner message
   this.logger.banner('[ Core.setConfigPath ] - Initializing Core Stack > Setting config path.');
-  // create async process
+
+  // Create async process
   var deferred  = Q.defer();
 
-  // test if path is a valid format ?
+  // Test if path is a valid format ?
   if (_.isString(p) && !_.isEmpty(p)) {
-    // is absolute ?
+    // Is absolute ?
     if (!path.isAbsolute(p)) {
-      // normalize path
+      // Normalize path
       p = path.normalize([ process.cwd(), p ].join('/'));
     }
 
-    // file exists ?
+    // File exists ?
     fs.stat(p, function (error, stats) {
-      // default error message
+      // Default error message
       var errorMessage = 'Invalid config path given.';
 
-      // has error ?
+      // Has error ?
       if (!error) {
-        // is directory ?
+        // Is directory ?
         if (!stats.isDirectory()) {
-          // set error message
+          // Set error message
           errorMessage = 'Invalid config path given.';
-          // set error status
-          error        = true;
+
+          // Set error status
+          error = true;
         } else {
-          // all is ok set data
+          // All is ok set data
           if (!this.config.setConfigPath(p)) {
-            // set error message
+            // Set error message
             errorMessage = 'Cannot set config path. config refused value.';
-            // set error status
-            error        = true;
+
+            // Set error status
+            error = true;
           }
         }
       }
 
-      // has error for promise action ?
+      // Has error for promise action ?
       if (error) {
-        // log error
+        // Log error
         this.logger.error([ '[ Core.setConfigPath ] -', errorMessage ].join(' '));
-        // reject
+
+        // Reject
         deferred.reject(errorMessage);
       } else {
-        // simple message
+        // Simple message
         this.logger.info('[ Core.setConfigPath ] - Config path was correctly set.');
-        // resolve all is ok
+
+        // Resolve all is ok
         deferred.resolve();
       }
     }.bind(this));
   } else {
-    // default message
+    // Default message
     var message = 'Invalid config path given. Must be a string and not empty';
-    // error
+
+    // Error
+
     this.logger.error([ '[ Core.setConfigPath ] -', message ].join(' '));
-    // reject
+
+    // Reject
     deferred.reject(message);
   }
 
-  // default statement
+  // Default statement
   return deferred.promise;
 };
 
@@ -177,70 +191,76 @@ Core.prototype.setConfigPath = function (p) {
  * @return {Object} default promise to catch
  */
 Core.prototype.configure = function () {
-  // banner message
+  // Banner message
   this.logger.banner([ '[ Core.configure ] - Initializing Core Stack >',
-                       'Starting middleware configuration.' ].join(' '));
-  // create async promise
+    'Starting middleware configuration.' ].join(' '));
+
+  // Create async promise
   var deferred = Q.defer();
 
-  // load config
+  // Load config
   this.config.load().then(function (data) {
     // Configure render
     if (this.render.updateConfig(data.render)) {
-      // messsage
+      // Messsage
       this.logger.info([ '[ Core.configure - Update render config succced.',
-                            'Add reference on app ]' ].join(' '));
-      // add on app
+        'Add reference on app ]' ].join(' '));
+
+      // Add on app
       if (this.addOnApp('render', this.render) &&
           this.addOnApp('logger', this.logger) &&
           this.addOnApp('config', this.config)) {
-        // config load already processed so we dont load data again
+        // Config load already processed so we dont load data again
         this.app.configureWithoutLoad(this.config, true).then(function () {
-          // add app on router
+          // Add app on router
           this.router.useApp(this.app.getApp());
-          // set routes path
+
+          // Set routes path
           if (this.router.setRoutes(data.router.routes)) {
-            // set controller routes
+            // Set controller routes
             if (this.router.setEndPoint(data.router.controllers)) {
-              // configure router ?
+              // Configure router ?
               if (this.router.configure()) {
-                // change process state
+                // Change process state
                 this.state = true;
-                // resolve all is ok
+
+                // Resolve all is ok
                 deferred.resolve();
               } else {
-                // reject invalid path
+                // Reject invalid path
                 deferred.reject('Cannot process router configuration. Errors occured.');
               }
             } else {
-              // reject invalid path
+              // Reject invalid path
               deferred.reject('Invalid path given for routes controllers.');
             }
           } else {
-            // reject invalid path
+            // Reject invalid path
             deferred.reject('Invalid path given for routes.');
           }
         }.bind(this)).catch(function (error) {
-          // reject with error
+          // Reject with error
           deferred.reject(error);
         });
       } else {
-        // reject process
+        // Reject process
         deferred.reject('Cannot continue. Cannot add render on app.');
       }
     } else {
-      // reject process
+      // Reject process
       deferred.reject('Cannot update render config. Cannot process configure.');
     }
-    // configure db ?
+
+    // Configure db ?
   }.bind(this)).catch(function (error) {
-    // error message
+    // Error message
     this.logger.error('[ Core.configure ] - Cannot load config. check your logs.');
-    // reject with error message
+
+    // Reject with error message
     deferred.reject(error);
   }.bind(this));
 
-  // default promise
+  // Default promise
   return deferred.promise;
 };
 
@@ -250,7 +270,7 @@ Core.prototype.configure = function () {
  * @return {Boolean} true if all is ok false otherwise
  */
 Core.prototype.isReady = function () {
-  // dafault statement
+  // Dafault statement
   return this.app.isReady() && this.state;
 };
 
@@ -262,25 +282,27 @@ Core.prototype.isReady = function () {
  * @return {Boolean} true if all is ok false otherwise
  */
 Core.prototype.addOnApp = function (name, value) {
-  // is valid format ??
+  // Is valid format ??
   if (_.isString(name) && !_.isEmpty(name) && !_.isUndefined(value) && !_.isNull(value)) {
-    // add element on app instance
+    // Add element on app instance
     this.app.getApp().set(name, value);
 
-    // a debug message
+    // A debug message
     this.logger.debug([ '[ Core.addOnApp ] - Add property', name,
-                       'with value :', utils.obj.inspect(_.omit(value, [
-                       'logger', 'schema', 'schemaList' ]))
-                      ].join(' '));
-    // valid statement
+      'with value :', utils.obj.inspect(_.omit(value, [
+        'logger', 'schema', 'schemaList' ]))
+    ].join(' '));
+
+    // Valid statement
     return true;
   }
 
-  // warning message
+  // Warning message
   this.logger.warning([ '[ Core.addOnApp ] - Cannot add property', name,
-                        'on current app. name must be a string and not empty.',
-                        'value must be not undefined or null.' ].join(' '));
-  // invalid & default statement
+    'on current app. name must be a string and not empty.',
+    'value must be not undefined or null.' ].join(' '));
+
+  // Invalid & default statement
   return false;
 };
 
@@ -291,14 +313,16 @@ Core.prototype.addOnApp = function (name, value) {
  * @return {Boolean} return true if all is ok falser otherwise
  */
 Core.prototype.useOnApp = function (middleware) {
-  // is a function ? and app is ready ?
+  // Is a function ? and app is ready ?
   if (this.isReady() && _.isFunction(middleware)) {
-    // add middleware on current app
+    // Add middleware on current app
     this.app.getApp().use(middleware);
-    // valid statement
+
+    // Valid statement
     return true;
   }
-  // default statement
+
+  // Default statement
   return false;
 };
 
@@ -308,7 +332,7 @@ Core.prototype.useOnApp = function (middleware) {
  * @return {Boolean} true if is a multiple instance false otherwise
  */
 Core.prototype.isMultipleInstances = function () {
-  // default statement
+  // Default statement
   return _.has(process.env, 'instances') && _.has(process.env, 'NODE_APP_INSTANCE');
 };
 
@@ -318,78 +342,83 @@ Core.prototype.isMultipleInstances = function () {
  * @return {Object} default promise to catch
  */
 Core.prototype.start = function () {
-  // create async process here
+  // Create async process here
   var deferred  = Q.defer();
 
-  // default error mesage
+  // Default error mesage
   var message   = 'Cannot start app. Configure process seems to be not ready';
 
-  // all is ready ?
+  // All is ready ?
   if (this.isReady()) {
-    // saving some requirements
+    // Saving some requirements
     var port = this.app.getApp().get('port');
     var host = this.app.getApp().get('host');
     var env  = this.app.getApp().get('env');
 
-    // banner start
+    // Banner start
     this.logger.banner([ '[ Core.start ] - Starting app :',
-                          this.app.getApp().get('app_name') ].join(' '));
+      this.app.getApp().get('app_name') ].join(' '));
 
-    // checking port
+    // Checking port
     portScanner.checkPortStatus(port, host, function (error, status) {
-      // is not multiple instance and status is closed ?
+      // Is not multiple instance and status is closed ?
       if (!this.isMultipleInstances() && status !== 'closed') {
-        // default message
+        // Default message
         message = [ 'Cannot start your app. Port [', port,
-                    '] is already in use on [', host, ']' ].join(' ');
-        // error
+          '] is already in use on [', host, ']' ].join(' ');
+
+        // Error
         this.logger.error([ '[ Core.start ] -', message ].join(' '));
-        // reject
+
+        // Reject
         deferred.reject(message);
       } else {
-        // is multiple instance ?
+        // Is multiple instance ?
         if (this.isMultipleInstances()) {
-          // log multiple instance
+          // Log multiple instance
           this.logger.info([ '[ Core.start ] - Application [',
             this.app.getApp().get('app_name'), '] start on cluster mode with [',
             process.env.instances || 0, '] instances. Current instance is [',
             process.env.NODE_APP_INSTANCE || 0, ']' ].join(' '));
         }
 
-        // normal process
+        // Normal process
         this.app.getApp().listen(port, function () {
           this.logger.info([ '[ Core.start ] -', env.toUpperCase(),
-                                'mode is enabled.' ].join(' '));
+            'mode is enabled.' ].join(' '));
           this.logger.info([ '[ Core.start ] - starting app on',
-                                [ '127.0.0.1', port ].join(':') ].join(' '));
+            [ '127.0.0.1', port ].join(':') ].join(' '));
           this.logger.info('[ Core.start ] - To Kill your server following these command :');
           this.logger.info('[ Core.start ] - No standalone usage : Press Ctrl-C to terminate');
           this.logger.info('[ Core.start ] - On standalone usage : kill your process');
-          // resolve all is ok here
+
+          // Resolve all is ok here
           deferred.resolve();
         }.bind(this));
       }
-    }.bind((this)));
+    }.bind(this));
   } else {
-    // app is not ready
+    // App is not ready
     this.logger.error([ '[ Core.start ] - ', message ].join(' '));
-    // reject
+
+    // Reject
     deferred.reject(message);
   }
 
-  // default statement
+  // Default statement
   return deferred.promise;
 };
 
 // Default export
 module.exports = function (l) {
-  // is a valid logger ?
+  // Is a valid logger ?
   if (_.isUndefined(l) || _.isNull(l)) {
     logger.warning('[ Core.constructor ] - Invalid logger given. Use internal logger');
-    // assign
+
+    // Assign
     l = logger;
   }
 
-  // default statement
-  return new (Core)(l);
+  // Default statement
+  return new Core(l);
 };

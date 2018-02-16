@@ -17,7 +17,7 @@
       "enable"      : true,
       "options" : {
         "url"         : "myhosturl.url",
-        "aliases"     : [ "alias.myhosturl.url" ],      
+        "aliases"     : [ "alias.myhosturl.url" ],
         "subdomains"  : true,
         "http"        : {
           "redirect" : {
@@ -33,7 +33,7 @@
       "options" : {
         "store" : {
           "instance" : "mongo",
-          "uri" : "mongodb://192.168.2.100:27017/r2do",
+          "uri" : "mongodb://192.168.2.110:27017/r2do",
           "type" : "uri"
         }
       }
