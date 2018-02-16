@@ -27,23 +27,28 @@ function Configure () {
  * @return {Boolean} true if all is ok false otherwise
  */
 Configure.prototype.init = function (value) {
-  // create Async process
+  // Create Async process
   var deferred = Q.defer();
 
-  // default repeat item
+  // Default repeat item
   var repeat = {
-    logger  : joi.object().keys({
-      level   : joi.string().default('debug').allow([ 'debug', 'versobe', 'warning',
-                                                    'error', 'info'
-                                                  ]),
-      rotate  : joi.object().keys({
-        path    : joi.string().required().empty(),
-        name    : joi.string().required().empty()
-      }).default({ enable : false, path : '' }).allow([ 'path', 'name' ])
-    }).allow([ 'level', 'rotate' ]).default({ level : 'debug' })
+    logger : joi.object().keys({
+      level : joi.string().default('debug').allow([ 'debug', 'versobe', 'warning',
+        'error', 'info'
+      ]),
+      rotate : joi.object().keys({
+        path : joi.string().required().empty(),
+        name : joi.string().required().empty()
+      }).default({
+        enable : false,
+        path   : ''
+      }).allow([ 'path', 'name' ])
+    }).allow([ 'level', 'rotate' ]).default({
+      level : 'debug'
+    })
   };
 
-  // default scheme
+  // Default scheme
   var schema = joi.object().keys({
     modules : joi.array().items(joi.string().required().empty()).default([]),
     config  : joi.string().required().empty(),
@@ -54,24 +59,24 @@ Configure.prototype.init = function (value) {
     }).allow([ 'development', 'staging', 'production' ])
   }).allow([ 'modules', 'config', 'env' ]);
 
-  // try to validate
+  // Try to validate
   var validate = joi.validate(value, schema);
 
-  // has error ?
+  // Has error ?
   if (_.isNull(validate.error)) {
-    // saved rules
+    // Saved rules
     this.rules = validate.value;
 
-    // resolve with current object
+    // Resolve with current object
     deferred.resolve(validate.value);
   } else {
-    // reject with error
+    // Reject with error
     deferred.reject(validate.error);
   }
 
-  // default statement
+  // Default statement
   return deferred.promise;
 };
 
 // Default export
-module.exports = new (Configure)();
+module.exports = new Configure();

@@ -1,7 +1,6 @@
-## 2.1.0 - (2016-12-09)
-
-- Major update in package
-- Remove non needed jade package
+## 3.0.0 (2018-02-16)
+- Major update of all dependencies
+- Update node version engine to >= 8.9.4
 
 ## 2.0.1 - (2016-08-08)
 
