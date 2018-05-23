@@ -1,6 +1,6 @@
 {
   "name": "yocto-core-stack",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Core package for Yoctopus tools.",
   "scripts": {},
   "author": {
@@ -50,7 +50,7 @@
     "portscanner": "^2.1.1",
     "q": "^1.4.1",
     "yocto-config": "^3.0.0",
-    "yocto-express": "^3.0.0",
+    "yocto-express": "^3.0.1",
     "yocto-logger": "^3.0.0",
     "yocto-render": "^2.0.0",
     "yocto-router": "^2.0.0",
